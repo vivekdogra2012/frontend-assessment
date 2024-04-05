@@ -1,38 +1,388 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'DIN';
+  src: url('../src/assets/fonts/DINCondensedBold.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'GillSans';
+  src: url('../src/assets/fonts/GillSans.ttc') format('ttc');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font: normal normal bold 22px/52px DIN Condensed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Navigation.css */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navigation {
+  background-color: transparent;
   display: flex;
-  flex-direction: column;
+  padding: 10px 10px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 99%;
+  z-index: 1;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-item {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
+.navigation > .leftSec > .nav-list > .nav-item:nth-child(1){
+  font: normal normal bold 28px / 23px DIN Condensed;
+}
+
+.nav-item:hover{
+  cursor: pointer;
+}
+
+
+/* Sidebar.css */
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: -2%;
+  height: 100%;
+  width: 7%;
+  z-index: 1;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+.sidebar > ul > li{
+  position: relative;
+  list-style: none;
+  display: block;
+  width: 50%;
+  text-align: center;
+  color: #333333;
+  font: normal normal bold 18px/52px DIN Condensed;
+}
+.sidebar > ul > li::after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 20px;
+  background: black;
+  left: 20%;
+  top: 45%;
+}
+.sidebar > ul > li.strike::after{
+  width: 40px;
+}
+
+
+/* right sidebar css*/
+
+.rightbtn{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  background: white;
+  color: black;
+  padding: 0px 10px;;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 1;
+  transform: matrix(0, -1, 1, 0, 0, 0);
+  text-align: left;
+  font: normal normal bold 18px / 52px DIN Condensed;
+  letter-spacing: 0.18px;
+}
+
+
+/* top banner.css */
+.top-banner {
+  background-color: #ffdac9;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+}
+.top-banner > .bannerImg{
+  position: relative;
+  background: url('./assets/Images/1000132333.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 860px;
+}
+.stampMain{
+  position: absolute;
+  top: 17%;
+  left: 25%;
+}
+
+
+.top-banner > .bannerImg > .Centertext{
+  position: absolute;
+  top: 45%;
+  left: 37%;
+  width: 25%;
+  height: 170px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.top-banner > .bannerImg > .Centertext >div:nth-child(1){
+  width: 431px;
+  height: 82px;
+  text-align: center;
+  font: normal normal bold 82px / 95px DIN Condensed;
+}
+.top-banner > .bannerImg > .Centertext > h1{
+  width: 432px;
+  height: 115px;
+  text-align: center;
+  font: normal normal bold 115px / 95px DIN Condensed;
+  margin-top: 0;
+}
+.top-banner > .bannerImg > .Centertext > p{
+  margin-top: -26%;
+  height: 35px;
+  text-align: center;
+  font: normal normal bold 35px / 52px DIN Condensed;
+}
+
+/* location css */
+
+.locationText{
+  position: absolute;
+  left: 10%;
+  top: 280%;
+  background: #fefefe;
+  padding: 10px;
+  width: 180px;
+}
+.locationText > h2{
+  position: absolute;
+  top: -80%;
+  font: normal normal bold 62px/52px DIN Condensed;
+  letter-spacing: 0px;
+  color: #333333;
+}
+.locationText > p{
+  font: normal normal normal 15px/20px Gill Sans;
+letter-spacing: 0.15px;
+color: #333333;
+}
+.custom-marker {
+  filter: hue-rotate(0deg);
+}
+
+/* meet our comunity Css */
+
+.meet-our-community{
+  padding: 10%;
+  min-height: 120vh;
+  position: relative;
+}
+
+.content-row {
+  margin-bottom: 20px;
+  display: flex;
+}
+div.item{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+div.item:first-child, div.item:last-child{
+  justify-content: end;
+}
+
+.alignRight{
+  float: right;
+  margin-right: 15%;
+  margin-top: 5%;
+}
+
+.leftBlock{
+  width: 200px;
+  height: auto;
+  position: absolute;
+  left: 30%;
+}
+.leftBlock > div.heading{
+  text-align: left;
+  font: normal normal bold 62px / 52px DIN Condensed;
+  letter-spacing: 0px;
+  color: #333333;
+  text-transform: uppercase;
+}
+.leftBlock > button.knowMore{
+  background-color: #FFDAC9;
+  text-align: left;
+  font: normal normal bold 18px / 52px DIN Condensed;
+  letter-spacing: 0.18px;
+  color: #333333;
+  border: 1px solid #FFDAC9;
+  padding: 5px;
+  line-height: normal;
+}
+.leftBlock > p{
+  text-align: left;
+  font: normal normal bold 22px/25px DIN Condensed;
+  letter-spacing: 0.44px;
+  color: #333333;
+}
+
+.rightBlock{
+  display: flex;
+}
+
+.imageContainer{
+  padding: 10px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 15px 50px #0000000F;
+  position: relative;
+}
+.imageContainer > div.instagaram{
+  background: url('./assets/Images/instagram-btn.png') no-repeat;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.textCardMain{
+  width: 250px;
+  height: 250px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 15px 50px #0000000F;
+  padding: 10px;
+  position: relative;
+  z-index: 999;
+}
+
+.textCardMain > h2{
+  text-align: left;
+  font: normal normal bold 22px/52px DIN Condensed;
+  letter-spacing: 0.44px;
+  color: #333333;
+  margin: 0;
+}
+
+.textCardMain > div.text{
+  text-align: left;
+  font: normal normal normal 15px/20px Gill Sans;
+  letter-spacing: 0.15px;
+  color: #333333;
+}
+
+.textCardMain > div.bottom{
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+  display: flex;
+  gap: 10px;
+}
+
+.textCardMain > div.bottom > span{
+  display: inline-flex;
+  gap: 5px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.textCardMain > div.bottom > span > b{
+  font: normal normal bold 14px/42px DIN Condensed;
+}
+
+.compGroup{
+  display: flex;
+  gap: 4%;
+}
+.compGroup.layout1, .compGroup.layout2{
+  position: relative;
+}
+.compGroup.layout1::before{
+  content: '';
+  background:url('./assets/Images/detail02.png') no-repeat;
+  width: 134px;
+  height: 98px;
+  background-size: contain;
+  position: absolute;
+  bottom: -10%;
+  left: 33%;
+}
+.compGroup.layout2::before{
+  content: '';
+  background:url('./assets/Images/detail03.png') no-repeat;
+  width: 134px;
+  height: 98px;
+  background-size: cover;
+  position: absolute;
+  bottom: -15%;
+  left: 10%;
+}
+.compGroup.layout1::after{
+  content: '';
+  background:url('./assets/Images/detail01.png') no-repeat;
+  width: 24px;
+  height: 72px;
+  background-size: contain;
+  position: absolute;
+  bottom: -10%;
+  right: -2%;
+  z-index: 1;
+}
+
+div.leftText{
+  width: 192px;
+  height: 141px;
+  text-align: left;
+  font: normal normal normal 15px / 20px Gill Sans;
+  letter-spacing: 0.15px;
+  color: #333333;
+}
+
+div.spaceBetween{
+  justify-content: space-between;
+  width: 100%;
+}
+
+div.item:nth-child(1) {
+  animation-delay: 1s; /* Delay for the first content row */
+}
+
+div.item:nth-child(2) {
+  animation-delay: 1.5; /* Delay for the second content row */
+}
+
+div.item:nth-child(3) {
+  animation-delay: 2s; /* Delay for the third content row */
+}
+/* Initially hide content */
+.slow-appear-content {
+   opacity: 0; 
+}
+.slow-appear-content.visible{
+  opacity: 1; 
+}
+.slow-appear-content.visible > div.item {
+  animation: slide-up 2.5s ease-in-out forwards; /* Apply animation when content is visible */
+}
+
+@keyframes slide-up {
   from {
-    transform: rotate(0deg);
+    transform: translateY(200%);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
