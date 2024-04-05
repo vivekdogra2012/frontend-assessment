@@ -28,7 +28,7 @@ const MeetOurCommunity = ({visibility}) => {
                 <div className='item'>
                     <div className="content-row content-row2">
                         <div className='compGroup rightCard layout2' >
-                            <TextCard text={`It's taco Tuesday! These tacos from @jesseszewczyk have no added sugars and are SO good 🌮. Find the recipe from the link in our bio! 📸: @taylormillerphoto`} header='@buzzfeedfood' comments={60} likes={16.7}/>
+                            <TextCard text={`Waffle sticks in Copenhagen! 🇩🇰😍 Milk chocolate with sprinkles, dark chocolate with coconut and milk chocolate with peanuts! [📷: @foodwithmichel] #lovefood`} header='@love_food' comments={789} likes={99.7}/>
                             <ImageCard img={img2} />
                         </div>
                     </div>
@@ -39,7 +39,7 @@ const MeetOurCommunity = ({visibility}) => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure.
                     </div>
                     <div className='compGroup rightCard layout3'>
-                        <TextCard text={`It's taco Tuesday! These tacos from @jesseszewczyk have no added sugars and are SO good 🌮. Find the recipe from the link in our bio! 📸: @taylormillerphoto`} header='@buzzfeedfood' comments={60} likes={16.7}/>
+                        <TextCard text={`Getting into long weekend mode like 🍤 #pancitpalabok (📷 @jeepneynyc)`} header='@buzzfeedfood' comments={152} likes={2}/>
                         <ImageCard img={img3} />
                     </div>
                 </div>
