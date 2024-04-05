@@ -67,6 +67,7 @@
   list-style: none;
   display: block;
   width: 50%;
+  height: 30px;
   text-align: center;
   color: #333333;
   font: normal normal bold 18px/52px DIN Condensed;
@@ -77,8 +78,8 @@
   height: 1px;
   width: 20px;
   background: black;
-  left: 20%;
-  top: 45%;
+  left: 15%;
+  top: 80%;
 }
 .sidebar > ul > li.strike::after{
   width: 40px;
