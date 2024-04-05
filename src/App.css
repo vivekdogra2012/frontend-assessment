@@ -352,6 +352,7 @@ div.leftText{
 div.spaceBetween{
   justify-content: space-between;
   width: 100%;
+  align-items: center;
 }
 
 div.item:nth-child(1) {
